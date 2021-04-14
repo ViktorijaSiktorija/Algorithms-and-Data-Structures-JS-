@@ -11,22 +11,22 @@
 // regex (/[^\w]/g,""), toLowercase,
 //char maps,  count keys in 1 object/count lenth of chars
 
-// Moje resenje, samo uporedila duzine stringova i regex
-// function anagrams(stringA, stringB) {
+// First solution, string leng and regex
+function anagrams(stringA, stringB) {
         
-//         stringA = stringA.replace(/[^\w]/g,"").toLowerCase();
-//         stringB = stringB.replace(/[^\w]/g,"").toLowerCase();
+        stringA = stringA.replace(/[^\w]/g,"").toLowerCase();
+        stringB = stringB.replace(/[^\w]/g,"").toLowerCase();
 
-//         if (stringA.length === stringB.length) {
-//             console.log("true")
-//         } else console.log("false")
+        if (stringA.length === stringB.length) {
+            console.log("true")
+        } else console.log("false")
 
-//     return stringA,stringB;
-// }
+    return stringA,stringB;
+}
 
-// console.log(anagrams('RAIL! SAFETY!', 'fairy tales'))
+console.log(anagrams('RAIL! SAFETY!', 'fairy tales'))
 
-// char map, helper function, compare keys
+// Second solution, char map, helper function, compare keys
 function anagrams(stringA, stringB) {
     const aCharMap = buildCharMap(stringA);
     const bCharMap = buildCharMap(stringB);
@@ -53,7 +53,7 @@ function buildCharMap(str){
 
 console.log(anagrams('RAIL! SAFETY!', 'fairy tales'))
 
-// sa arejs, sort() -> moze sa brojevima i slovima
+// Third solution sort()
 function anagrams(stringA, stringB) {
     return cleanString(stringA) === cleanString(stringB);
 }
