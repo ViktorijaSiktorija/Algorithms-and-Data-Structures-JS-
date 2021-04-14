@@ -7,7 +7,7 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-// Prvo resenje,for
+// First solution, for loop
 function vowels(str) {
     let count = 0;
     const check = ['a','e','i','o','u'];
@@ -24,7 +24,7 @@ module.exports = vowels;
 // Regex
 function vowels(str) {
     const matches = str.match(/[aeiou]/gi);
-    // match vraca null ili arej
+    // match returns null or an array
     return matches ? matches.length : 0;
 }
 console.log(vowels('Why do you ask?'))
