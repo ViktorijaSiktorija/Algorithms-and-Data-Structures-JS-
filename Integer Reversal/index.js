@@ -8,8 +8,7 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-//Moje resenje
-//parseFloat vraca i decimalne
+// First solution, parseFloat
 function reverseInt(n) {
     return (
         parseFloat(
@@ -24,8 +23,7 @@ function reverseInt(n) {
 
 // console.log(reverseInt(500));
 
-// Drugo resenje, parseInt
-// parseInt vraca intidzer, ne decimalne
+// Second solution, parseInt
 
 function reverseInt(n) {
     return (
