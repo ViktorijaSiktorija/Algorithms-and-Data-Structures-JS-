@@ -17,12 +17,6 @@ class Node {
         this.left = null;
         this.right = null;
     }
-    // zovemo insert na root node, unutar root node gledamo vrednost toga i vrednost data koja dolazi u funkciju
-    // ako je ta koja dolazi manja, treba da je dodamo na node koji je na levoj strani,
-    // ako nema dalje levih nodova treba nam novi nod koji dodelimo levoj strani
-    // uz recursion
-    // 1 ako trenutni nod ima vrednosti levo i desno
-    // ako smo na kraju drveta a tu treba da se doda vrednost
     insert(data) {
         if (data < this.data && this.left) {
             this.left.insert(data);
@@ -34,8 +28,6 @@ class Node {
             this.right = new Node(data);
         }
     }
-    // contains je kao search, dali drvo sadrzi vrednost 3 
-    // tada nas ne zanima desna strana jer znamo da je 3 manje od npr 10
     contains(data) {
         if (this.data === data) {
             return this;
