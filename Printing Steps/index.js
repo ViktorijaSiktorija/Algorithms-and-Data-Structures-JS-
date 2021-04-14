@@ -18,7 +18,7 @@
 //       '####'
 
 
-// Prvo resenje sa for za redove i kolone
+// First solution, for loop
 function steps(n) {
     for (let row = 0; row < n; row++) {
         stair = "";
@@ -35,7 +35,7 @@ function steps(n) {
 
 console.log(steps(4))
 
-// Drugo resenje sa recursion
+// Second solution, recursion
 function steps(n, row = 0, stair = '') {
     if (n === row) {
         return;
