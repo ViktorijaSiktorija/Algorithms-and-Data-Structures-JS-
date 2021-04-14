@@ -8,6 +8,7 @@
 // Example:
 //   fib(4) === 3
 
+// First solution, for, linear runtime
 // Prvo resenje, for, linear runtime
 function fib(n) {
     let n1 = 0, n2 = 1, nextTerm;
@@ -20,7 +21,7 @@ function fib(n) {
 }
 console.log(fib(9));
 
-// Drugo, recursion
+// Second solution, recursion
 function fib(n) {
     //if (num <= 1) return 1;
     if (n < 2) return n;
@@ -29,14 +30,11 @@ function fib(n) {
 }
 console.log(fib(9));
 
-// Recursion -> exponential Runtime 2^n, traje duze, nije dobro
-// Bolje - memoization!
-// Prvo se pravi genericka memoization funkcija,
-// koristi se za sve gde treba memoizacija
+// Third solution, memoization
 
 function memoize(fn){
     const cache = {};
-    return function(...args){// uzmi sve argumente i stavi u arej
+    return function(...args){
         if (cache[args]) {
             return cache[args];
         }
@@ -50,8 +48,6 @@ function fib(n){
     if (n < 2) {
         return n;
     }
-    // ovi fib nisu vise referenca na fib funkciju
-    // nego na memoizovanu verziju te funkcije
     return fib(n - 1) + fib(n - 2);
 }
 
