@@ -5,17 +5,7 @@
 // every node's right hand child is greater than
 // the parent
 
-// recursion
-// min i maks vrednosti
-// krecemo od root node, vrednosti ispod odredjuju validnost
-// od root ka levo, vrednosti moraju da bduu manje od root value, maks value uvek manja od root max=10 npr
-// do node 0, uporedimo sa maks, manje je, onda dole idalje levo, sledeci je -1 0 je sada maks vrednost
-// -1 nema levu stranu, ima desnu, kada idemo desno dete mora da bude vece od -1, min je sada -1
-// 15 - mora vise od -1 al manje od 0, nije match,vece je od -1 i 0, nije validno BST
-
 function validate(node, min = null, max = null) {
-    // prvi korak, next node 0 razume da je max vrednost 10 npr
-    // levo maks update, desno min value update
     if (max !== null && node.data > max) {
         return false;
     }
