@@ -14,11 +14,6 @@
 
 // if % 3 === 0 if n % 5 === 0 
 
-// Bila blizu, nisam stavila <=n, samo <
-// stavila n%3 itd umesto i,
-// zato sto nisam stavila for
-// nisam poslednji else console.log(i)
-// ali sam napisala logiku za if
 function fizzBuzz(n) {
     for (let i = 1; i <= n; i++) {
         if (i % 3 === 0 && i % 5 === 0){
