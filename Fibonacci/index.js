@@ -9,7 +9,6 @@
 //   fib(4) === 3
 
 // First solution, for, linear runtime
-// Prvo resenje, for, linear runtime
 function fib(n) {
     let n1 = 0, n2 = 1, nextTerm;
     for (let i = 1; i <= n; i++) {
