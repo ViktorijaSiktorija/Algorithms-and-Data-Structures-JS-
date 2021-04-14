@@ -7,7 +7,7 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-// Resenje 1, moje resenje
+// First solution
 function palindrome(str) {
     let reversed = str.split("").reverse().join("")
     if (reversed === str) {
@@ -23,19 +23,18 @@ function palindrome(str) {
 
 console.log(palindrome("baab"))
 
-// Resenje 2, njegovo, truthy i falsy
+// Second solution, truthy and falsy
 
 function palindrome(str) {
     const reversed = str.split("").reverse().join("")
     
     return str === reversed;
-    // ako jeste jednako onda je truth,ako ne onda je false
 }
 
 
 console.log(palindrome("baab"))
 
-// Resenje 3, sa every; lose je jer radi duplo, uporedjuje svaki element sa svakim elementom areja
+// Third solution, every
 
 function palindrome(str) {
     return str
