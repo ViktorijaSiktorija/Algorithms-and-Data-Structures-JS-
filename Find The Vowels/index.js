@@ -7,10 +7,12 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-// First solution, for loop
+// First solution, for of loop
+
 function vowels(str) {
     let count = 0;
     const check = ['a','e','i','o','u'];
+    
     for (let char of str.toLowerCase()){
         if (check.includes(char)) {
             count++;
@@ -18,13 +20,15 @@ function vowels(str) {
     }
     return count;
 }
-console.log(vowels('Why do you ask?'))
-module.exports = vowels;
 
-// Regex
+// Second, Regex
+
 function vowels(str) {
     const matches = str.match(/[aeiou]/gi);
     // match returns null or an array
     return matches ? matches.length : 0;
 }
+
 console.log(vowels('Why do you ask?'))
+
+module.exports = vowels;

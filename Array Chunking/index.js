@@ -8,23 +8,41 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-// Resenje 1, moje sa slice
+// Resenje 1, for loop, slice
+
 function chunk(array, size){
     var tempArray = [];
     
     for (i = 0; i < array.length; i += size) {
-        tempArray.push(array.slice(i, i+size));
+        tempArray.push(array.slice(i, i + size));
     }
 
     return tempArray;
 }
 
-var result = chunk([1, 2, 3, 4, 5, 6, 7, 8], 3)
-console.log(result);
+// var result = chunk([1, 2, 3, 4, 5, 6, 7, 8], 3)
+// console.log(result);
 
-// Resenje 2, for of, poslednji element
+// Resenje 2, while loop i slice
 
-function chunk(array,size){
+function chunk(array, size){
+    let chunked = [];
+    let index = 0;
+
+    // Loop while index is less than array length
+    while (index < array.length) {
+        // Slice out from the index to the index + chunk size
+        // and push on to the chunked array
+        chunked.push(array.slice(index, index + size));
+        // Increment by chunk size 
+        index += size;
+    }
+    return chunked;
+}
+
+// Resenje 3, for of, poslednji element
+
+function chunk(array, size){
     const chunked = [];
 
     for (let element of array){
@@ -39,17 +57,26 @@ function chunk(array,size){
     return chunked;
 }
 
-// Resenje 3, while loop i slice
+// Resenje 4, forEach
 
-function chunk(array,size){
-    let chunked = [];
-    let index = 0;
-    while (index < array.length) {
-        chunked.push(array.slice(index, index+size));
-        index += size;
-    }
+function chunk(array, size) {
+    // Init chunked array
+    const chunked = []
+
+    // Loop trough array
+    array.forEach(element => {
+        const last = chunked[chunked.length -1]
+        // Check if last and if last length is equal to the chunked length
+        if (!last || last.length === size) {
+            chunked.push([element])
+        } else {
+            last.push(element)
+        }
+    })
     return chunked;
 }
 
+var result = chunk([1, 2, 3, 4, 5, 6, 7, 8], 3)
+console.log(result);
 
 //module.exports = chunk;

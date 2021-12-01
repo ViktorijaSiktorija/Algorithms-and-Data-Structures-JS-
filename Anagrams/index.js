@@ -9,9 +9,10 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 // regex (/[^\w]/g,""), toLowercase,
-//char maps,  count keys in 1 object/count lenth of chars
+// char maps,  count keys in 1 object/count lenth of chars
 
 // First solution, string leng and regex
+
 function anagrams(stringA, stringB) {
         
         stringA = stringA.replace(/[^\w]/g,"").toLowerCase();
@@ -26,7 +27,26 @@ function anagrams(stringA, stringB) {
 
 console.log(anagrams('RAIL! SAFETY!', 'fairy tales'))
 
-// Second solution, char map, helper function, compare keys
+// Second solution, helper function, sort()
+
+function anagrams(stringA, stringB) {
+    return cleanString(stringA) === cleanString(stringB);
+}
+
+// Helper function
+function cleanString(str){
+    return str
+        .replace(/[^\w]/g,"")
+        .toLowerCase()
+        .split("")
+        .sort()
+        .join("");
+}
+
+console.log(anagrams('RAIL! SAFETY!', 'fairy tales'))
+
+// Third solution, char map, helper function, compare keys
+
 function anagrams(stringA, stringB) {
     const aCharMap = buildCharMap(stringA);
     const bCharMap = buildCharMap(stringB);
@@ -53,15 +73,5 @@ function buildCharMap(str){
 
 console.log(anagrams('RAIL! SAFETY!', 'fairy tales'))
 
-// Third solution sort()
-function anagrams(stringA, stringB) {
-    return cleanString(stringA) === cleanString(stringB);
-}
-
-function cleanString(str){
-    return str.replace(/[^\w]/g,"").toLowerCase().split("").sort().join("");
-}
-
-console.log(anagrams('RAIL! SAFETY!', 'fairy tales'))
 
 module.exports = anagrams;

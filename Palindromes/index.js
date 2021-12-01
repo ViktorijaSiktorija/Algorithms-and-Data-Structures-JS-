@@ -8,12 +8,13 @@
 //   palindrome("abcdefg") === false
 
 // First solution
-function palindrome(str) {
+
+function palindromes(str) {
     let reversed = str.split("").reverse().join("")
+    
     if (reversed === str) {
         console.log("true")
         return true
-        
     }
     else {
         console.log("false")
@@ -21,28 +22,33 @@ function palindrome(str) {
     }
 }
 
-console.log(palindrome("baab"))
+console.log(palindromes("madam"))
 
 // Second solution, truthy and falsy
 
-function palindrome(str) {
+function palindromed(str) {
     const reversed = str.split("").reverse().join("")
     
     return str === reversed;
 }
 
 
-console.log(palindrome("baab"))
+console.log(palindromed("baab"))
 
-// Third solution, every
+// Third solution, every - nije dobro
 
-function palindrome(str) {
+function palindromee(str) {
     return str
     .split("")
-    .every((char,i)=>{  return char === str[str.lenght -i -1];  })
+    .every((char,i) => {  
+        console.log(char)
+        console.log(i)
+        return char === str[str.lenght -i -1]
+        console.log(char)
+    })
 }
 
 
-console.log(palindrome("baab"))
+console.log(palindromee("madam"))
 
-module.exports = palindrome;
+//module.exports = palindrome;

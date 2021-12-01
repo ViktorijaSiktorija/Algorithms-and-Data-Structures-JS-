@@ -101,4 +101,5 @@ function matrix(n) {
     return results;
   }
   console.log(matrix(8));
+
 module.exports = matrix;

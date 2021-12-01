@@ -19,6 +19,7 @@
 
 
 // First solution, for loop
+
 function steps(n) {
     for (let row = 0; row < n; row++) {
         stair = "";
@@ -35,7 +36,9 @@ function steps(n) {
 
 console.log(steps(4))
 
+
 // Second solution, recursion
+
 function steps(n, row = 0, stair = '') {
     if (n === row) {
         return;
@@ -51,6 +54,7 @@ function steps(n, row = 0, stair = '') {
     }
     steps(n, row, stair);
 }
+
 console.log(steps(4))
 
 module.exports = steps;

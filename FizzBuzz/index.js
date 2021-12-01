@@ -16,7 +16,7 @@
 
 function fizzBuzz(n) {
     for (let i = 1; i <= n; i++) {
-        if (i % 3 === 0 && i % 5 === 0){
+        if (i % 3 === 0 && i % 5 === 0){ // i % 15 === 0
             console.log("fizzbuzz");
         } else if (i % 3 === 0){
             console.log("fizz");
@@ -27,6 +27,22 @@ function fizzBuzz(n) {
         }
     }
 } 
-fizzBuzz(25)
+fizzBuzz(31)
+
+function fizBuz(n) {
+    for (let i = 1; i <= n; i++) {
+        if (i % 15 === 0) {
+            console.log('fizbaz')
+        } else if (i % 3 === 0) {
+            console.log('fiz')
+        } else if (i % 5 === 0) {
+            console.log('baz')
+        } else {
+            console.log(i)
+        }
+    }
+}
+
+console.log(fizBuz(70))
 
 module.exports = fizzBuzz;

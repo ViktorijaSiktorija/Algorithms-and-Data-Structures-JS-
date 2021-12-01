@@ -9,6 +9,7 @@
 //   fib(4) === 3
 
 // First solution, for, linear runtime
+
 function fib(n) {
     let n1 = 0, n2 = 1, nextTerm;
     for (let i = 1; i <= n; i++) {
@@ -20,7 +21,22 @@ function fib(n) {
 }
 console.log(fib(9));
 
+// 
+
+function fib(n) {
+    const result = [0,1]
+
+    for (let index = 2; index < n; index++) {
+        const a = result[index - 1]
+        const b = result[index - 2]
+
+        result.push(a + b)
+    }
+    return result[n]
+}
+
 // Second solution, recursion
+
 function fib(n) {
     //if (num <= 1) return 1;
     if (n < 2) return n;
@@ -33,6 +49,7 @@ console.log(fib(9));
 
 function memoize(fn){
     const cache = {};
+    
     return function(...args){
         if (cache[args]) {
             return cache[args];

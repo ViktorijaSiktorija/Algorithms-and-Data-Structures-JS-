@@ -9,6 +9,7 @@
 //   reverseInt(-90) === -9
 
 // First solution, parseFloat
+
 function reverseInt(n) {
     return (
         parseFloat(
@@ -21,7 +22,7 @@ function reverseInt(n) {
       )                 
 }
 
-// console.log(reverseInt(500));
+console.log(reverseIntt(-90));
 
 // Second solution, parseInt
 
