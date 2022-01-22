@@ -21,7 +21,7 @@ console.log(reverse("Built in"));
 const reversed = str => str.split("").reverse().join("")
 console.log(reversed("Shorthand"))
 
-// First sol. spread operator, bez split
+// Shorthand with spread operator, bez split
 
 const reversee = str => [...str].reverse().join("")
 console.log(reversee("Spread operator"))
@@ -48,7 +48,7 @@ function incrForLoop (str) {
 }
 console.log(incrForLoop("Incrementing for loop"))
 
-// Second; for of loop
+// For of loop
 
 // empty string called "reversed"
 // for each character in provided string
@@ -74,7 +74,7 @@ function forEachLoop (str) {
 }
 console.log(forEachLoop("Foreach Loop"))
 
-// Third; reduce helper higher order array method
+// Reduce helper higher order array method
 
 function reverse(str) {
     return str.split("").reduce((reversed, char) => char + reversed,'')

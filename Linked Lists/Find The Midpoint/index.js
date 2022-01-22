@@ -12,7 +12,7 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
-//const LinkedList = require('./linkedlist');
+const LinkedList = require('./linkedlist.js');
 
 function midpoint(list) {
     let slow = list.getFirst(); 

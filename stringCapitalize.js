@@ -38,12 +38,13 @@ console.log(capitalized('I love javaScript'))
 
 function capitalizeLetter(str) {
     return str
+        .toLowerCase()
         .split(' ')
         .map(word => word[0].toUpperCase() + word.substr(1))
         .join(' ')
 }
 
-console.log(capitalizeLetter('ja trenutno sedim'))
+console.log(capitalizeLetter('JA TRENUTNO SEDIM'))
 
 // RegEx
 
@@ -52,6 +53,8 @@ function regEx(str) {
 }
 
 console.log(regEx('cao cao cao cao ojojoj'))
+
+// For loop
 
 function capitalize(str) {
     let result = str[0].toUpperCase();

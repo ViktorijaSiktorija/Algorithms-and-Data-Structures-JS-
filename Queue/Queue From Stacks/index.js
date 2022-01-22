@@ -33,7 +33,7 @@ class Queue {
         }
         return record;
     }
-    peek () {
+    peek() {
         while (this.first.peek()){
             this.second.push(this.first.pop());
         }

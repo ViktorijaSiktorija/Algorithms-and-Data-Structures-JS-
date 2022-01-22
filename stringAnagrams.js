@@ -14,13 +14,13 @@
 // First solution, string leng and regex
 
 function anagrams(stringA, stringB) {
-        
-        stringA = stringA.replace(/[^\w]/g,"").toLowerCase();
-        stringB = stringB.replace(/[^\w]/g,"").toLowerCase();
+    
+    stringA = stringA.replace(/[^\w]/g,"").toLowerCase();
+    stringB = stringB.replace(/[^\w]/g,"").toLowerCase();
 
-        if (stringA.length === stringB.length) {
-            console.log("true")
-        } else console.log("false")
+    if (stringA.length === stringB.length) {
+        console.log("true")
+    } else console.log("false")
 
     return stringA,stringB;
 }

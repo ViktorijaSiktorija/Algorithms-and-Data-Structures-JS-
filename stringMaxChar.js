@@ -6,20 +6,12 @@
 // maxChar("apple 1231111") === "1"
 
 
+// for of
+
 function maxChar(str) {
     const obj = {};
     let maxNum = 0;
     let maxChar = "";
-
-    // oba rade: 
-
-    // str.split('').forEach(char => {
-    //     if (obj[char]) {
-    //         obj[char]++
-    //     } else {
-    //         obj[char] = 1
-    //     }
-    // })
 
     for (let char of str) {
         obj[char] = obj[char] + 1 || 1;
@@ -35,6 +27,8 @@ function maxChar(str) {
 }
 
 console.log(maxChar("sussssssssssssssssssssbiduiiiiiiiiii"))
+
+// forEach
 
 function maxCharNum(str) {
     const charMap = {}

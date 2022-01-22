@@ -47,7 +47,7 @@ class LinkedList {
         if (!this.head){
             return;
         }
-        this.head = this.head.next();
+        this.head = this.head.next
     }
     removeLast(){
         if (!this.head){
@@ -124,6 +124,7 @@ list.insertFirst(15)
 // list.size()
 console.log(list.getFirst())
 console.log(list.getLast())
+console.log(list.insertAt(33, 1))
 //list.clear()
 //list.size vraca 0
 console.log(list.getAt(0))

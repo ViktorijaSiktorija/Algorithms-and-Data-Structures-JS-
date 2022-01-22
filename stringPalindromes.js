@@ -35,7 +35,7 @@ function palindromed(str) {
 
 console.log(palindromed("baab"))
 
-// Third solution, every - nije dobro
+// Third solution, every 
 
 function palindromee(str) {
     return str
@@ -43,12 +43,12 @@ function palindromee(str) {
     .every((char,i) => {  
         console.log(char)
         console.log(i)
-        return char === str[str.lenght -i -1]
+        return char === str[str.length -i -1]
         console.log(char)
     })
 }
 
 
-console.log(palindromee("madam"))
+console.log(palindromee("viktorija"))
 
 //module.exports = palindrome;

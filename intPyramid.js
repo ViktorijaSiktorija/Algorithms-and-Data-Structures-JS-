@@ -24,7 +24,7 @@ function pyramid(n) {
         for (let col = 0; col < 2 * n - 1; col++) {
             if (midpoint - row <= col && midpoint + row >= col) {
                 level += "#";
-            } else{
+            } else {
                 level += " ";
             }
         }

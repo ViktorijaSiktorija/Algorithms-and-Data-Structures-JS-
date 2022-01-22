@@ -23,18 +23,4 @@ function longestWord(sen){
     }
 }
 
-function longest(sen) {
-    const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g)
-
-    const sorted = wordArr.sort((a, b) => b.length - a.length)
-
-    const longestWordArray = sorted.filter(word => word.length === sorted[0].length)
-
-    if (longestWordArray.length === 1) {
-        return longestWordArray[0]
-    } else {
-        return longestWordArray;
-    }
-}
-
-console.log(longest('cao ja sam viktorija'))
+console.log(longestWord('cao ja sam viktorija'))
