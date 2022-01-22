@@ -17,7 +17,6 @@ function capitalizes(str) {
         
     }
     return words.join(" ");
-
 }
 
 console.log(capitalizes("cao ja sam vika"))
