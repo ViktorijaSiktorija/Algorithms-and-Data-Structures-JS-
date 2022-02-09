@@ -1,3 +1,5 @@
+// For loop
+
 function repeat(str, num) {
     let accum = ""
 
@@ -7,9 +9,9 @@ function repeat(str, num) {
     return accum
 }
 
-repeat("vika",66)
+console.log(repeat("vika",66))
 
-/////////
+// Recursion
 
 function repeatStr(str, num) {
     if (num < 1) {
@@ -19,11 +21,13 @@ function repeatStr(str, num) {
     }
 }
 
-repeatStr('Koko', 10)
+console.log(repeatStr('Koko', 10))
 
 
-/////////
+// Recursion shorthand
 
 function repeatStringNumTimes(str, num) {
   return num > 0 ? str + repeatStringNumTimes(str, num - 1) : '';
 }
+
+console.log(repeatStringNumTimes('stolica', 20))

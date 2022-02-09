@@ -9,17 +9,17 @@
 // for of
 
 function maxChar(str) {
-    const obj = {};
+    const charMap = {};
     let maxNum = 0;
     let maxChar = "";
 
     for (let char of str) {
-        obj[char] = obj[char] + 1 || 1;
+        charMap[char] = charMap[char] + 1 || 1;
     }
 
-    for (let char in obj) {
-        if (obj[char] > maxNum) {
-            maxNum = obj[char];
+    for (let char in charMap) {
+        if (charMap[char] > maxNum) {
+            maxNum = charMap[char];
             maxChar = char;
         }
     }

@@ -1,14 +1,16 @@
+// For loop
 function factorial(num) {
     let product = 1
-    for (let i=2; i <= num; i++) {
+    
+    for (let i = 2; i <= num; i++) {
         product *= i
     }
     return product
 }
 
-factorial(1)
+console.log(factorial(1))
 
-///////// Head-recursive
+// Head-recursive
 
 function factorialize(num) {
     if (num === 0) {
@@ -18,9 +20,9 @@ function factorialize(num) {
     return num * factorialize(num - 1)
 }
 
-factorialize(7)
+console.log(factorialize(1))
 
-//////// Tail-recursive
+// Tail-recursive
 
 function factorialise(num, factorial = 1) {
     if (num === 0) {
@@ -29,5 +31,4 @@ function factorialise(num, factorial = 1) {
         return factorialise(num - 1, factorial * num)
     }
 }
-
-factorialise(4)
+console.log(factorialize(5))

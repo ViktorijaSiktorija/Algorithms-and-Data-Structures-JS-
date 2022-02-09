@@ -1,19 +1,19 @@
 // Take an array of arrays and flatten to a single array
 
 
-// 1, reduce
+// 1 reduce
 
 function flattenArray(arrays) {
     return arrays.reduce((a, b) => a.concat(b))
 }
 
-// 2, apply
+// 2 apply
 
 function flattenArray(arrays) {
     return [].concat.apply([], arrays)
 }
 
-// 3, spread operator
+// 3 spread operator
 
 function flattenArray(arrays) {
     return [].concat(...arrays)

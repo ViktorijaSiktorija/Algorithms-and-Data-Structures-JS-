@@ -26,7 +26,7 @@ console.log(fib(9));
 function fib(n) {
     const result = [0,1]
 
-    for (let index = 2; index < n; index++) {
+    for (let index = 2; index <= n; index++) {
         const a = result[index - 1]
         const b = result[index - 2]
 
@@ -60,14 +60,14 @@ function memoize(fn){
     }
 }
 
-function fib(n){
+function slowFib(n){
     if (n < 2) {
         return n;
     }
     return fib(n - 1) + fib(n - 2);
 }
 
-fib = memoize(fib);
-console.log(fib(9));
+const fibb = memoize(slowFib);
+console.log(fibb(9));
 
 module.exports = fib;

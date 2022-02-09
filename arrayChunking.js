@@ -8,7 +8,7 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-// Resenje 1, for loop, slice
+// for loop, slice
 
 function chunk(array, size){
     var tempArray = [];
@@ -23,7 +23,7 @@ function chunk(array, size){
 // var result = chunk([1, 2, 3, 4, 5, 6, 7, 8], 3)
 // console.log(result);
 
-// Resenje 2, while loop i slice
+// while loop i slice
 
 function chunk(array, size){
     let chunked = [];
@@ -40,7 +40,7 @@ function chunk(array, size){
     return chunked;
 }
 
-// Resenje 3, for of, poslednji element
+// for of, poslednji element
 
 function chunk(array, size){
     const chunked = [];
@@ -57,7 +57,7 @@ function chunk(array, size){
     return chunked;
 }
 
-// Resenje 4, forEach
+// forEach
 
 function chunk(array, size) {
     // Init chunked array

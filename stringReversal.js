@@ -39,9 +39,9 @@ console.log(decrForLoop("Decrementing for loop"))
 
 // Incrementing for loop
 
-function incrForLoop (str) {
+function incrForLoop(str) {
     let reversed = ""
-    for (let i = 0; i <= str.length; i++) {
+    for (let i = 0; i <= str.length - 1; i++) {
         reversed = str[i] + reversed 
     }
     return reversed

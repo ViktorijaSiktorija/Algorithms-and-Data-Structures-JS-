@@ -1,21 +1,6 @@
-function longest(sen) {
-    const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g)
-
-    const sorted = wordArr.sort((a,b) => b.length - a.length)
-
-    const longestWordArray = sorted.filter(word => word.length === sorted[0].length)
-
-    if (longestWordArray === 1) {
-        return longestWordArray[0]
-    } else {
-        return longestWordArray
-    }
-}
-
-longest('viktorija siktorija liki siki')
-
-function findLongestWordLength(str) {
-  let words = str.split(' ');
+// for loop
+function findLongestWordLength(sen) {
+  let words = sen.split(' ');
   let maxLength = 0;
 
   for (let i = 0; i < words.length; i++) {
@@ -27,26 +12,31 @@ function findLongestWordLength(str) {
   return maxLength;
 }
 
-////
+console.log(findLongestWordLength('ja sam programerka'))
 
-function findLongestWordLength(s) {
-  return s.split(' ')
-    .reduce(function(longest, word) {
-      return Math.max(longest, word.length)
-    }, 0);
+// Reduce, Math max
+
+function findLongestWordLengths(sen) {
+  return sen
+    .split(' ')
+    .reduce((longest, word) => Math.max(longest, word.length), 0)
 }
 
-////
+console.log(findLongestWordLengths('koko j e mala kuca'))
 
-function findLongestWordLength(str) {
-  return Math.max(...str.split(" ").map(word => word.length));
+// Map, spread operator, Math max
+
+function longestWordLength(sen) {
+  return Math.max(...sen.split(" ").map(word => word.length));
 }
 
-////////
+console.log(longestWordLength('u maloj kuci zivim ja'))
 
-function findLongestWordLength(str) {
+// Recursion, Math.max
+
+function wordLength(sen) {
   // split the string into individual words
-  const words = str.split(" ");
+  const words = sen.split(" ");
 
   // words only has 1 element left that is the longest element
   if (words.length == 1) {
@@ -61,4 +51,4 @@ function findLongestWordLength(str) {
   );
 }
 
-findLongestWordLength("The quick brown fox jumped over the lazy dog");
+console.log(wordLength("The quick brown fox jumped over the lazy dog"))
